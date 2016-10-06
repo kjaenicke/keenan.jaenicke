@@ -1,0 +1,27 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            keenan.jaenicke
+tagline:          'A Jekyll theme'
+description:      'I write about tech stuff and occasionally my attempts at running'
+url:              http://hyde.getpoole.com
+baseurl:          /
+
+author:
+  name:           ['Mark Otto', 'Keenan Jaenicke']
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
+
+gems: [jekyll-paginate]
