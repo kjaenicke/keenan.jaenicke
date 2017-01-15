@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router';
+import { Link } from 'react-router';
 import injectSheet from 'react-jss';
 import colors from '../theme/colors';
 
@@ -44,10 +44,12 @@ const classes = {
 
 const HomeButton = ({ sheet: {classes} }) => (
   <div className={classes.homeButton}>
-    <svg className={classes.iconSVG} xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 55 55">
-      <circle r="25" cx="25" cy="25" />
-      <text textAnchor="middle" x="25" y="25">KJ</text>
-    </svg>
+    <Link to="/home">
+      <svg className={classes.iconSVG} xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 55 55">
+        <circle r="25" cx="25" cy="25" />
+        <text textAnchor="middle" x="25" y="25">KJ</text>
+      </svg>
+    </Link>
   </div>
 );
 

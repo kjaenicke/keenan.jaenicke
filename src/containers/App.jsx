@@ -11,6 +11,8 @@ const classes = {
     height: '100%'
   },
   content: {
+    display: 'flex',
+    flexDirection: 'column',
     backgroundColor: 'white',
     height: '100%'
   }
@@ -22,7 +24,7 @@ const App = ({ sheet: {classes}, children }) => (
     <div className={classes.content}>
       {children}
     </div>
-    <Footer />
+    { /* <Footer /> */ }
   </div>
 );
 

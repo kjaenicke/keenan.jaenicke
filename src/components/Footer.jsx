@@ -12,7 +12,7 @@ const classes = {
 
 const Footer = ({ sheet: {classes} }) => (
   <footer className={classes.footer}>
-
+    { "Built with <3" }
   </footer>
 );
 

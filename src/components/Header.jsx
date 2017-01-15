@@ -58,6 +58,9 @@ const Header = ({ sheet: {classes} }, context) => {
     <header className={classes.header}>
       <HomeButton />
       <ul className={classes.menu}>
+        <Link activeClassName="active" to="/home">
+          <li className={classes.menuItem}>Home</li>
+        </Link>
         <Link activeClassName="active" to="/tech">
           <li className={classes.menuItem}>Tech</li>
         </Link>

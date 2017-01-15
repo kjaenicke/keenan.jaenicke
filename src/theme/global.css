@@ -6,3 +6,32 @@ html, body, div#root {
   margin: 0px;
   font-family: 'Slabo 27px', serif;
 }
+
+/*
+  Font scaling
+  https://css-tricks.com/rems-ems/
+  Document level adjustments
+*/
+html {
+  font-size: 17px;
+}
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+
+/* Type will scale with document */
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.5rem;
+}
