@@ -2,6 +2,7 @@
   "name": "keenan.jaenicke",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kjaenicke.github.io/keenan.jaenicke",
   "devDependencies": {
     "react-scripts": "0.8.5"
   },
