@@ -1,1 +1,0 @@
-Blog and personal site
