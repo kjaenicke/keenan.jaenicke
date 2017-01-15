@@ -26,7 +26,7 @@ const classes = {
         fill: 'white'
       },
       '& circle': {
-        fill: colors.green
+        fill: colors.lightGreen
       }
     },
     '& text': {
@@ -35,7 +35,7 @@ const classes = {
     },
     '& circle': {
       fill: 'white',
-      stroke: colors.green,
+      stroke: colors.lightGreen,
       strokeWidth: '2px',
       transition: 'fill 0.5s'
     }

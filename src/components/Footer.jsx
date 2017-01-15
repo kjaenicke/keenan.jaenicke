@@ -5,7 +5,7 @@ import colors from '../theme/colors';
 const classes = {
   footer: {
     display: 'flex',
-    backgroundColor: colors.darkGrey,
+    backgroundColor: colors.lightGrey,
     height: '10%'
   }
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import injectSheet from 'react-jss';
+import { Link } from 'react-router';
 import colors from '../theme/colors';
 
 import HomeButton from './HomeButton';
@@ -17,7 +18,13 @@ const classes = {
   menu: {
     display: 'flex',
     flex: 1,
-    listStyle: 'none'
+    listStyle: 'none',
+    '& a': {
+      textDecoration: 'none',
+      '&.active > li': {
+        color: colors.green
+      }
+    }
   },
   menuItem: {
     color: colors.darkGrey,
@@ -44,16 +51,32 @@ const classes = {
   }
 };
 
-const Header = ({ sheet: {classes}, props }) => (
-  <header className={classes.header}>
-    <HomeButton />
-    <ul className={classes.menu}>
-      <li className={classes.menuItem}>Tech</li>
-      <li className={classes.menuItem}>Running</li>
-      <li className={classes.menuItem}>About</li>
-      <li className={classes.menuItem}>Contact</li>
-    </ul>
-  </header>
-);
+const Header = ({ sheet: {classes} }, context) => {
+  const { router } = context;
+
+  return (
+    <header className={classes.header}>
+      <HomeButton />
+      <ul className={classes.menu}>
+        <Link activeClassName="active" to="/tech">
+          <li className={classes.menuItem}>Tech</li>
+        </Link>
+        <Link activeClassName="active" to="/running">
+          <li className={classes.menuItem}>Running</li>
+        </Link>
+        <Link activeClassName="active" to="/random">
+          <li className={classes.menuItem}>Random</li>
+        </Link>
+        <Link activeClassName="active" to="/contact">
+          <li className={classes.menuItem}>Contact</li>
+        </Link>
+      </ul>
+    </header>
+  );
+};
+
+Header.contextTypes = {
+  router: React.PropTypes.object
+};
 
 export default injectSheet(classes)(Header);
