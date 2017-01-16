@@ -14,7 +14,10 @@ const classes = {
     flex: 2,
     flexDirection: 'column',
     height: '100%',
-    background: 'url(./cover_photo.jpg) no-repeat center center fixed',
+    background: `linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(./cover_photo.jpg) no-repeat center center fixed`,
     '-webkit-background-size': 'cover',
     '-moz-background-size': 'cover',
     '-o-background-size': 'cover',
