@@ -10,7 +10,8 @@ const classes = {
     display: 'flex',
     height: '30%',
     backgroundColor: colors.lightGrey,
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    background: 'linear-gradient(to top, #999 0, #ffffff 4px, #ffffff 100%)'
   },
   homeButton: {
     alignSelf: 'flex-start'
@@ -52,8 +53,6 @@ const classes = {
 };
 
 const Header = ({ sheet: {classes} }, context) => {
-  const { router } = context;
-
   return (
     <header className={classes.header}>
       <HomeButton />

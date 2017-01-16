@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import App from '../containers/App';
 import Home from '../containers/Home';
@@ -16,6 +16,7 @@ const Routes = () => (
       <Route path='running' component={Running} />
       <Route path='random' component={Random} />
       <Route path='contact' component={Contact} />
+      <IndexRoute component={Home} />
     </Route>
   </Router>
 );

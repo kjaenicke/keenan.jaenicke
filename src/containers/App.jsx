@@ -2,7 +2,7 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 const classes = {
   app: {

@@ -20,7 +20,7 @@ const classes = {
   },
   iconSVG: {
     width: 'auto',
-    height: '50%',
+    height: '100%',
     '&:hover': {
       '& text': {
         fill: 'white'
