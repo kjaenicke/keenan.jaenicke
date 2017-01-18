@@ -3,22 +3,21 @@ import injectSheet from 'react-jss';
 import { Link } from 'react-router';
 import colors from '../theme/colors';
 
-import HomeButton from './HomeButton';
-
 const classes = {
   header: {
     display: 'flex',
-    height: '30%',
-    backgroundColor: colors.lightGrey,
+    flex: 1,
+    flexDirection: 'column',
     justifyContent: 'flex-end',
-    background: 'linear-gradient(to top, #999 0, #ffffff 4px, #ffffff 100%)'
+    backgroundColor: colors.lightGrey
   },
   homeButton: {
     alignSelf: 'flex-start'
   },
   menu: {
-    display: 'flex',
     flex: 1,
+    display: 'flex',
+    alignSelf: 'flex-end',
     listStyle: 'none',
     '& a': {
       textDecoration: 'none',
@@ -43,11 +42,13 @@ const classes = {
       height: '100%',
       flexWrap: 'wrap',
       flexDirection: 'row',
-      alignItems: 'center'
+      justifyContent: 'center'
     },
     menu: {
       flexWrap: 'wrap',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      alignItems: 'center',
+      paddingLeft: '0px'
     }
   }
 };
@@ -55,11 +56,12 @@ const classes = {
 const Header = ({ sheet: {classes} }, context) => {
   return (
     <header className={classes.header}>
-      <HomeButton />
       <ul className={classes.menu}>
         <Link activeClassName="active" to="/home">
           <li className={classes.menuItem}>Home</li>
         </Link>
+        {
+        /*
         <Link activeClassName="active" to="/tech">
           <li className={classes.menuItem}>Tech</li>
         </Link>
@@ -69,6 +71,8 @@ const Header = ({ sheet: {classes} }, context) => {
         <Link activeClassName="active" to="/random">
           <li className={classes.menuItem}>Random</li>
         </Link>
+        */
+        }
         <Link activeClassName="active" to="/contact">
           <li className={classes.menuItem}>Contact</li>
         </Link>

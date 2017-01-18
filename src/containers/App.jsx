@@ -10,17 +10,17 @@ const classes = {
     flexDirection: 'column',
     height: '100%'
   },
+  header: {},
   content: {
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: 'white',
-    height: '100%'
+    flex: 4
   }
 };
 
 const App = ({ sheet: {classes}, children }) => (
   <div className={classes.app}>
-    <Header />
+    <div className={classes.header}>
+      <Header />
+    </div>
     <div className={classes.content}>
       {children}
     </div>
