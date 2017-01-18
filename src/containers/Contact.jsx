@@ -23,7 +23,12 @@ const classes = {
       color: colors.white
     },
     '& i.fa': {
-      fontSize: '6em'
+      fontSize: '6em',
+      transition: 'transform 1s, color 1s',
+      '&:hover': {
+        transform: 'scale(1.2)',
+        color: colors.black
+      }
     }
   }
 };
