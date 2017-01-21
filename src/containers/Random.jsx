@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchTechPosts } from '../actions';
+import { fetchRandomPosts } from '../actions';
 import PostsCategory from '../components/PostsCategory';
 import PostFactory from '../factories/PostFactory';
 
@@ -10,4 +10,4 @@ const RandomContainer = props => (
   />
 );
 
-export default PostFactory(RandomContainer, fetchTechPosts);
+export default PostFactory(RandomContainer, fetchRandomPosts, "random");

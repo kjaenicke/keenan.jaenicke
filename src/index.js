@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import Routes from './router';
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import createLogger from 'redux-logger';
+import { __DEV__ } from './constants';
 
 // Set up some global styles
 // eslint-disable-next-line
@@ -15,10 +17,16 @@ import sagas from './sagas'
 
 const sagaMiddleware = createSagaMiddleware();
 
+let middlewares = [sagaMiddleware];
+
+if(__DEV__){
+  middlewares.push(createLogger());
+}
+
 // mount it on the Store
 const store = createStore(
   reducer,
-  applyMiddleware(sagaMiddleware)
+  applyMiddleware(...middlewares)
 );
 
 // then run the saga

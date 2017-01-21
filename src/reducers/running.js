@@ -1,10 +1,10 @@
 import makePostReducer from './makePostReducer';
 import { fetchRunningPosts, fetchRunningPostsSuccess, fetchRunningPostsFailure } from '../actions';
 
-const tech = makePostReducer({
+const running = makePostReducer({
   requestAction: fetchRunningPosts,
   successAction: fetchRunningPostsSuccess,
   failureAction: fetchRunningPostsFailure
 });
 
-export default tech;
+export default running;

@@ -10,4 +10,4 @@ const TechContainer = props => (
   />
 );
 
-export default PostFactory(TechContainer, fetchTechPosts);
+export default PostFactory(TechContainer, fetchTechPosts, "tech");

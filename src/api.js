@@ -6,13 +6,13 @@ export const fetchAllPosts = () => (
 );
 
 export const fetchTechPosts = () => (
-  axios.get(`${API_BASE}/posts?type=tech`).then(res => res.data)
+  axios.get(`${API_BASE}/posts?type=Tech`).then(res => res.data)
 );
 
-export const fetchTechRunning = () => (
-  axios.get(`${API_BASE}/posts?type=running`).then(res => res.data)
+export const fetchRunningPosts = () => (
+  axios.get(`${API_BASE}/posts?type=Running`).then(res => res.data)
 );
 
 export const fetchRandomPosts = () => (
-  axios.get(`${API_BASE}/posts?type=random`).then(res => res.data)
+  axios.get(`${API_BASE}/posts?type=Random`).then(res => res.data)
 );

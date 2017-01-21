@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../components/Home';
 import PostsCategory from '../components/PostsCategory';
 import PostFactory from '../factories/PostFactory';
-import { fetchTechPosts } from '../actions';
+import { fetchAllPosts } from '../actions';
 
 const HomeContainer = props => (
   <div>
@@ -13,4 +13,4 @@ const HomeContainer = props => (
   </div>
 );
 
-export default PostFactory(HomeContainer, fetchTechPosts);
+export default PostFactory(HomeContainer, fetchAllPosts, "all");

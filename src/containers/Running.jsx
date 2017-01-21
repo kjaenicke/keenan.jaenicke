@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchTechPosts } from '../actions';
+import { fetchRunningPosts } from '../actions';
 import PostsCategory from '../components/PostsCategory';
 import PostFactory from '../factories/PostFactory';
 
@@ -10,4 +10,4 @@ const RunningContainer = props => (
   />
 );
 
-export default PostFactory(RunningContainer, fetchTechPosts);
+export default PostFactory(RunningContainer, fetchRunningPosts, "running");

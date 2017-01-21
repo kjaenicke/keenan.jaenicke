@@ -1,8 +1,8 @@
 import { createAction } from 'redux-actions';
 
-export const fetchAllPosts = createAction('FETCH_RUNNING_POSTS');
-export const fetchAllPostsSuccess = createAction('FETCH_RUNNING_POSTS_SUCCESS');
-export const fetchAllPostsFailure = createAction('FETCH_RUNNING_POSTS_FAILURE');
+export const fetchAllPosts = createAction('FETCH_ALL_POSTS');
+export const fetchAllPostsSuccess = createAction('FETCH_ALL_POSTS_SUCCESS');
+export const fetchAllPostsFailure = createAction('FETCH_ALL_POSTS_FAILURE');
 
 export const fetchRunningPosts = createAction('FETCH_RUNNING_POSTS');
 export const fetchRunningPostsSuccess = createAction('FETCH_RUNNING_POSTS_SUCCESS');
