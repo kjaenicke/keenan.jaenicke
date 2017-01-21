@@ -1,17 +1,13 @@
-import React from 'react';
-import injectSheet from 'react-jss';
-import * as common from '../theme/common';
+import React, { Component } from 'react';
+import { fetchTechPosts } from '../actions';
+import PostsCategory from '../components/PostsCategory';
+import PostFactory from '../factories/PostFactory';
 
-const classes = {
-  header: common.pageLayout.pageHeader
-};
-
-const Running = ({ sheet: {classes} }) => (
-  <div className="running">
-    <h3 className={classes.header}>
-      Running
-    </h3>
-  </div>
+const RunningContainer = props => (
+  <PostsCategory
+    name="Running"
+    posts={ props.posts }
+  />
 );
 
-export default injectSheet(classes)(Running);
+export default PostFactory(RunningContainer, fetchTechPosts);

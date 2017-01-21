@@ -1,17 +1,13 @@
-import React from 'react';
-import injectSheet from 'react-jss';
-import * as common from '../theme/common';
+import React, { Component } from 'react';
+import { fetchTechPosts } from '../actions';
+import PostsCategory from '../components/PostsCategory';
+import PostFactory from '../factories/PostFactory';
 
-const classes = {
-  header: common.pageLayout.pageHeader
-};
-
-const Random = ({ sheet: {classes} }) => (
-  <div className="random">
-    <h3 className={classes.header}>
-      Random
-    </h3>
-  </div>
+const RandomContainer = props => (
+  <PostsCategory
+    name="Random"
+    posts={ props.posts }
+  />
 );
 
-export default injectSheet(classes)(Random);
+export default PostFactory(RandomContainer, fetchTechPosts);

@@ -7,7 +7,7 @@ import Post from './Post';
 
 const classes = {
   header: common.pageLayout.pageHeader,
-  tech: {
+  postsCategory: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -21,10 +21,10 @@ const classes = {
   }
 };
 
-const Tech = ({ sheet: {classes}, posts }) => (
-  <div className={classes.tech}>
+const PostsCategory = ({ sheet: {classes}, name, posts }) => (
+  <div className={classes.postsCategory}>
     <h3 className={classes.header}>
-      Tech
+      { name }
     </h3>
     <div className={classes.posts}>
       { posts.map(p => <Post key={p.id} {...p} />) }
@@ -32,8 +32,9 @@ const Tech = ({ sheet: {classes}, posts }) => (
   </div>
 );
 
-Tech.propTypes = {
+PostsCategory.propTypes = {
+  name: PropTypes.string,
   posts: PropTypes.array
 };
 
-export default injectSheet(classes)(Tech);
+export default injectSheet(classes)(PostsCategory);

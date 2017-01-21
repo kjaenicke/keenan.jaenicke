@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { fetchTechPosts } from '../actions';
-import Tech from '../components/Tech';
+import PostsCategory from '../components/PostsCategory';
+import PostFactory from '../factories/PostFactory';
 
-class TechContainer extends Component {
-    componentWillMount(){
-      this.props.fetchTechPosts();
-    }
+const TechContainer = props => (
+  <PostsCategory
+    name="Tech"
+    posts={ props.posts }
+  />
+);
 
-    render(){
-      return (
-        <Tech
-          posts={ this.props.posts }
-        />
-      );
-    }
-}
-
-const mapStateToProps = state => ({ posts: state.tech.items });
-const mapDispatchToProps = ({ fetchTechPosts });
-
-export default connect(mapStateToProps, mapDispatchToProps)(TechContainer);
+export default PostFactory(PostsCategory, fetchTechPosts);

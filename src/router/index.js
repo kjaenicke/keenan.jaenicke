@@ -6,7 +6,7 @@ import Home from '../containers/Home';
 import Tech from '../containers/Tech';
 import Running from '../containers/Running';
 import Random from '../containers/Random';
-import Contact from '../containers/Contact';
+import About from '../containers/About';
 
 const Routes = () => (
   <Router history={hashHistory}>
@@ -15,7 +15,7 @@ const Routes = () => (
       <Route path='tech' component={Tech} />
       <Route path='running' component={Running} />
       <Route path='random' component={Random} />
-      <Route path='contact' component={Contact} />
+      <Route path='about' component={About} />
       <IndexRoute component={Home} />
     </Route>
   </Router>

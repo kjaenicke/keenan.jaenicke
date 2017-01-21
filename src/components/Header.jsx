@@ -63,18 +63,14 @@ const Header = ({ sheet: {classes} }, context) => {
         <Link activeClassName="active" to="/tech">
           <li className={classes.menuItem}>Tech</li>
         </Link>
-        {
-        /*
         <Link activeClassName="active" to="/running">
           <li className={classes.menuItem}>Running</li>
         </Link>
         <Link activeClassName="active" to="/random">
           <li className={classes.menuItem}>Random</li>
         </Link>
-        */
-        }
-        <Link activeClassName="active" to="/contact">
-          <li className={classes.menuItem}>Contact</li>
+        <Link activeClassName="active" to="/about">
+          <li className={classes.menuItem}>About</li>
         </Link>
       </ul>
     </header>
