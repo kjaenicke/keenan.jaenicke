@@ -3,4 +3,4 @@ import About from '../components/About';
 
 const AboutContainer = props => <About />;
 
-export default About;
+export default AboutContainer;

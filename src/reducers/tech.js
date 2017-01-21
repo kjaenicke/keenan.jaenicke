@@ -1,12 +1,10 @@
-import { handleActions } from 'redux-actions';
-import { fetchTechPostsSuccess } from '../actions';
+import makePostReducer from './makePostReducer';
+import { fetchTechPosts, fetchTechPostsSuccess, fetchTechPostsFailure } from '../actions';
 
-const initialState = {
-  items: []
-};
-
-const tech = handleActions({
-  [fetchTechPostsSuccess]: (state, action) => ({ ...state, items: action.payload })
-}, initialState);
+const tech = makePostReducer({
+  requestAction: fetchTechPosts,
+  successAction: fetchTechPostsSuccess,
+  failureAction: fetchTechPostsFailure
+});
 
 export default tech;

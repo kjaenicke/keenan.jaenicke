@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { fetchTechPosts } from '../actions';
 import PostsCategory from '../components/PostsCategory';
 import PostFactory from '../factories/PostFactory';
@@ -10,4 +10,4 @@ const TechContainer = props => (
   />
 );
 
-export default PostFactory(PostsCategory, fetchTechPosts);
+export default PostFactory(TechContainer, fetchTechPosts);
