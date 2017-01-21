@@ -9,7 +9,7 @@ const classes = {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-end',
-    backgroundColor: colors.lightGrey
+    backgroundColor: colors.white
   },
   homeButton: {
     alignSelf: 'flex-start'
@@ -22,7 +22,7 @@ const classes = {
     '& a': {
       textDecoration: 'none',
       '&.active > li': {
-        color: colors.green
+        color: colors.brown
       }
     }
   },
@@ -32,7 +32,7 @@ const classes = {
     fontSize: '24px',
     margin: '0 10px 0 10px',
     '&:hover': {
-      color: colors.green,
+      color: colors.brown,
       transform: 'scale(1.075)'
     },
     transition: 'color 1s, transform 0.35s'

@@ -16,7 +16,7 @@ const classes = {
     flex: 1,
     flexDirection: 'column',
     height: '100%',
-    backgroundColor: colors.lightGreen
+    backgroundColor: colors.green
   },
   icons: {
     display: 'flex',
@@ -41,7 +41,7 @@ const classes = {
     textAlign: 'center',
     flex: 1,
     color: colors.white,
-    backgroundColor: colors.lightGreen,
+    backgroundColor: colors.green,
     justifyContent: 'center'
   }
 };

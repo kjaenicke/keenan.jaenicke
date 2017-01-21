@@ -1,13 +1,11 @@
 const colors = {
-  white: '#FFFFFF',
-  black: '#000000',
-  lightGrey: '#ecf0f1',
-  darkGrey: '#7f8c8d',
-  darkBlue: '#34495e',
-  purple: '#9b59b6',
-  green: '#27ae60',
-  lightGreen: '#79A888',
-  blue: '#0074D9'
+  white: 'white',
+  lightGrey: 'rgba(244, 247, 246, 1)',
+  black: 'rgba(44, 48, 46, 1)',
+  darkGrey: 'rgba(71, 74, 72, 1)',
+  darkGreen: 'rgba(93, 158, 114, 1)',
+  green: 'rgba(132, 183, 149, 1)',
+  brown: 'rgba(196, 134, 104, 1)'
 };
 
 export default colors;

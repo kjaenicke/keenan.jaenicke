@@ -1,29 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import injectSheet from 'react-jss';
-
-import * as common from '../theme/common';
 import { fetchTechPosts } from '../actions';
+import Tech from '../components/Tech';
 
-const classes = {
-  header: common.pageLayout.pageHeader
-};
+class TechContainer extends Component {
+    componentWillMount(){
+      this.props.fetchTechPosts();
+    }
 
-class Tech extends React.Component {
-  componentWillMount(){
-    this.props.fetchTechPosts();
-  }
-
-  render(){
-    <div className="tech">
-      <h3 className={classes.header}>
-        Tech
-      </h3>
-    </div>
-  }
+    render(){
+      return (
+        <Tech
+          posts={ this.props.posts }
+        />
+      );
+    }
 }
 
 const mapStateToProps = state => ({ posts: state.tech.items });
 const mapDispatchToProps = ({ fetchTechPosts });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Tech);
+export default connect(mapStateToProps, mapDispatchToProps)(TechContainer);

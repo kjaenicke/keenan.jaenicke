@@ -11,9 +11,8 @@ const classes = {
   },
   home: {
     display: 'flex',
-    flex: 2,
+    flex: 1,
     flexDirection: 'column',
-    height: '100%',
     background: `linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
@@ -43,7 +42,7 @@ const classes = {
     flexDirection: 'column',
     textAlign: 'center',
     flex: 1,
-    backgroundColor: colors.lightGreen,
+    backgroundColor: colors.green,
     justifyContent: 'center'
   },
   me: {
@@ -74,15 +73,6 @@ const Home = ({ sheet: {classes} }) => (
         I'm a developer that's passionate about building interesting,
         engaging applications with modern web technologies.
       </h3>
-    </div>
-    <div className={classes.about}>
-      <h3 className={classes.subHeader}>About Me</h3>
-      <img className={classes.me} src={me} alt="me in new york city" />
-      <p className={classes.bio}>
-        Hey there! I'm Keenan Jaenicke. I enjoy running, reading, hiking, playing guitar, and being outdoors.
-        I live in Indianapolis with my girlfriend and two dogs.  I graduated from Purdue University in 2013 with
-        a degree in Computer Information Technology and have worked as a software developer since then.
-      </p>
     </div>
   </div>
 );

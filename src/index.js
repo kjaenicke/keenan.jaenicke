@@ -7,7 +7,7 @@ import createSagaMiddleware from 'redux-saga'
 
 // Set up some global styles
 // eslint-disable-next-line
-import globalStyles from './theme/global.css';
+import GlobalStylesSheet from './theme/GlobalStyleSheet';
 
 // Redux and Sagas Setup
 import reducer from './reducers'
@@ -26,7 +26,9 @@ sagaMiddleware.run(sagas)
 
 ReactDOM.render(
   <Provider store={store}>
-    <Routes />
+    <GlobalStylesSheet>
+      <Routes />
+    </GlobalStylesSheet>
   </Provider>,
   document.getElementById('root')
 );
