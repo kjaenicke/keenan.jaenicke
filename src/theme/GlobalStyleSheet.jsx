@@ -15,7 +15,7 @@ const classes = {
     // https://css-tricks.com/rems-ems/
     // Document level adjustments
     'html': {
-      'fontSize': '16px'
+      'fontSize': '17px'
     },
     '@media (max-width: 900px)': {
       html: { fontSize: '15px' }
@@ -34,7 +34,11 @@ const classes = {
       fontSize: '2.25rem'
     },
     p: {
-      fontSize: '1rem'
+      fontSize: '1rem',
+      lineHeight: '1.5'
+    },
+    'span.byline': {
+      fontSize: '.875rem'
     }
   }
 };
