@@ -97,7 +97,7 @@ const About = ({ sheet: {classes} }) => (
         </a>
       </div>
       <div className={classes.followMe}>
-        <p>Let's get in touch! Please follow me on Github, Twitter, and/or Github!</p>
+        <p>Let's get in touch! Please follow me on Github, Twitter, and/or LinkedIn!</p>
       </div>
     </div>
   </div>
