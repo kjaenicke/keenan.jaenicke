@@ -2,6 +2,22 @@ import React from 'react';
 import injectSheet from 'react-jss';
 import colors from '../theme/colors';
 import Category from './Category';
+import Markdown from 'react-remarkable';
+import Highlight from 'highlight.js'
+
+const highlight = (str, lang) => {
+    if (lang && Highlight.getLanguage(lang)) {
+      try {
+        return Highlight.highlight(lang, str).value;
+      } catch (err) {}
+    }
+
+    try {
+      return Highlight.highlightAuto(str).value;
+    } catch (err) {}
+
+    return ''; // use external default escaping
+}
 
 const classes = {
   post: {
@@ -43,7 +59,7 @@ const Post = ({ sheet: {classes}, text, title, author, datestamp, categories }) 
       </div>
     </header>
     <section className={classes.content}>
-      <p>{text}</p>
+      <Markdown source={text} options={{ highlight }} />
     </section>
     <footer className={classes.footer}>
       <p className={classes.categories}>
