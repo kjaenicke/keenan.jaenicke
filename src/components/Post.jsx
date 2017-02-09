@@ -23,7 +23,6 @@ const classes = {
   post: {
     display: 'flex',
     flexDirection: 'column',
-    flexWrap: 'wrap',
     border: `1px solid ${colors.lightGrey}`,
     borderRadius: '5px',
     backgroundColor: colors.white,
