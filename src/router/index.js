@@ -11,12 +11,12 @@ import About from '../containers/About';
 const Routes = () => (
   <Router history={hashHistory}>
     <Route path='/' component={App}>
-      <Route path='home' component={Home} />
-      <Route path='tech' component={Tech} />
-      <Route path='running' component={Running} />
-      <Route path='random' component={Random} />
+      <Route path='home' component={About} />
+      <Route path='tech' component={About} />
+      <Route path='running' component={About} />
+      <Route path='random' component={About} />
       <Route path='about' component={About} />
-      <IndexRoute component={Home} />
+      <IndexRoute component={About} />
     </Route>
   </Router>
 );

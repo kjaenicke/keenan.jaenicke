@@ -3,13 +3,19 @@ import injectSheet from 'react-jss';
 
 const classes = {
   '@global': {
-    'html, body, div#root': {
-      display: 'flex',
-      flexDirection: 'column',
+    'html, body, div#root, [data-reactroot]': {
+      fontFamily: "'Slabo 27px', serif",
+      height: '100%'
+    },
+    'body': {
       height: '100%',
-      padding: '0px',
-      margin: '0px',
-      fontFamily: "'Slabo 27px', serif"
+      overflow: 'hidden',
+      margin: 0,
+      display: 'flex',
+      boxSizing: 'border-box'
+    },
+    '#root': {
+      width: '100%'
     },
     // Font scaling
     // https://css-tricks.com/rems-ems/
@@ -33,9 +39,12 @@ const classes = {
     h3: {
       fontSize: '2.25rem'
     },
+    h4: {
+      fontSize: '2rem',
+    },
     p: {
-      fontSize: '1rem',
-      lineHeight: '1.5'
+      fontSize: '1.25rem',
+      lineHeight: '1.7'
     },
     'span.byline': {
       fontSize: '.875rem'

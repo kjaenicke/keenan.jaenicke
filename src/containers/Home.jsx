@@ -7,9 +7,9 @@ import { fetchAllPosts } from '../actions';
 const HomeContainer = props => (
   <div>
     <Home />
-    <PostsCategory
+    {/* <PostsCategory
       posts={ props.posts }
-    />
+    /> */}
   </div>
 );
 

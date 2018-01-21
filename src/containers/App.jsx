@@ -2,29 +2,42 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 import Header from '../components/Header';
-// import Footer from '../components/Footer';
 
 const classes = {
   app: {
+    height: '100%',
+    overflow: 'hidden',
+    margin: 0,
+    display: 'flex',
+    boxSizing: 'border-box'
+  },
+  sidebar: {
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    height: '100%'
+    width: '30%',
+    flexGrow: 1,
+    overflowY: 'auto',
+    boxShadow: '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)'
   },
-  header: {},
   content: {
-    flex: 4
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    width: '70%',
+    flexGrow: 1,
+    overflowY: 'auto'
   }
 };
 
 const App = ({ sheet: {classes}, children }) => (
   <div className={classes.app}>
-    <div className={classes.header}>
+    <div className={classes.sidebar}>
       <Header />
     </div>
     <div className={classes.content}>
-      {children}
-    </div>
-    { /* <Footer /> */ }
+       {children}
+     </div>
   </div>
 );
 

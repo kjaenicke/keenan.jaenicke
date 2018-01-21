@@ -1,105 +1,118 @@
 import React from 'react';
 import injectSheet from 'react-jss';
-import * as common from '../theme/common';
 import colors from '../theme/colors';
-import me from '../img/me.jpeg';
 
 const classes = {
-  header: {
-    ...common.pageLayout.pageHeader,
-    color: colors.white
-  },
   about: {
+    padding: '0 10%'
+  },
+  pageHeading: {
+    display: 'flex',
+    justifyContent: 'center',
+    borderTop: '1px solid #fc1da7',
+    borderBottom: '1px solid #fba506',
+    textTransform: 'uppercase'
+  },
+  whack: {
+    fontFamily: 'Permanent Marker, cursive',
+    display: 'inline-block',
+    marginLeft: '20px',
+    marginRight: '20px',
+    color: '#F5A74C',
+  },
+  skills: {
+    display: 'flex',
+    justifyContent: 'space-evenly'
+  },
+  skillsHeading: {
+    textTransform: 'uppercase',
+    textAlign: 'center',
+    textDecoration: 'underline',
+    textDecorationColor: colors.darkGrey,
+
+  },
+  skillsColumn: {
+    listStyle: 'none',
+    paddingLeft: 0,
+    textAlign: 'center',
+    '& li': {
+      margin: '10px 0 10px 0',
+      fontWeight: 'bold'
+    }
+  },
+  interests: {
     display: 'flex',
     flexDirection: 'column',
-    textAlign: 'center',
-    flex: 1,
-    backgroundColor: colors.green,
-    justifyContent: 'center'
+    marginTop: '5%',
+    '& > img': {
+      alignSelf: 'center'
+    }
   },
   me: {
-    alignSelf: 'center',
-    width: '25%',
-    border: `10px solid ${colors.white}`,
-    margin: '2%'
-  },
-  bio: {
-    color: colors.white,
-    width: '75%',
-    alignSelf: 'center'
-  },
-  '@media (max-width: 425px)': {
-    me: {
-      width: '50%'
-    }
-  },
-  contact: {
-    display: 'flex',
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: colors.darkGrey
-  },
-  icons: {
-    display: 'flex',
-    justifyContent: 'center',
-    '& a': {
-      display: 'inline-block',
-      margin: '0 2% 0 2%',
-      color: colors.white
-    },
-    '& i.fa': {
-      fontSize: '6em',
-      transition: 'transform 1s, color 1s',
-      '&:hover': {
-        transform: 'scale(1.2)',
-        color: colors.green
-      }
-    }
-  },
-  followMe: {
-    display: 'flex',
-    flexDirection: 'column',
     textAlign: 'center',
-    flex: 1,
-    color: colors.white,
-    justifyContent: 'center',
-    marginBottom: '5%',
-    '& p': {
-      margin: '2% 2% 0 2%'
-    }
+    height: '50%',
+    width: '50%',
+    padding: '10px',
+    background: colors.white,
+    border: `1px solid ${colors.mediumGrey}`,
+    borderRadius: '5px'
   }
 };
 
 const About = ({ sheet: {classes} }) => (
-  <div className={classes.contactWrapper}>
-    <div className={classes.about}>
-        <h3 className={classes.header}>About Me</h3>
-        <img className={classes.me} src={me} alt="me in new york city" />
-        <p className={classes.bio}>
-          Hi! I'm Keenan Jaenicke. I enjoy running, reading, hiking, playing guitar, and being outdoors.
-          I live in Indianapolis with my girlfriend and two dogs.  I graduated from Purdue University in 2013 with
-          a degree in Computer Information Technology and have worked as a software developer since then.
-        </p>
-    </div>
-    <div className={classes.contact}>
-      <h3 className={classes.header}>
-        Contact
-      </h3>
-      <div className={classes.icons}>
-        <a href="https://www.linkedin.com/in/KeenanJae" target="_blank">
-          <i className="fa fa-linkedin-square" aria-hidden="true"></i>
-        </a>
-        <a href="https://twitter.com/KeenanJae" target="_blank">
-          <i className="fa fa-twitter-square" aria-hidden="true"></i>
-        </a>
-        <a href="https://github.com/kjaenicke" target="_blank">
-          <i className="fa fa-github-square" aria-hidden="true"></i>
-        </a>
+  <div className={classes.about}>
+    <h2 className={classes.pageHeading}>
+      <span className={classes.whack}> / </span> Skills <span className={classes.whack}> / </span>
+    </h2>
+    <section className={classes.skills}>
+      <div>
+        <h4 className={classes.skillsHeading}>Skills</h4>
+        <ul className={classes.skillsColumn}>
+          <li>JavaScript (ES6+)</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Node.js</li>
+          <li>C#</li>
+          <li>MSSQL Server</li>
+          <li>Postgres</li>
+        </ul>
       </div>
-      <div className={classes.followMe}>
-        <p>Let's get in touch! Please follow me on Github, Twitter, and/or LinkedIn!</p>
+      <div>
+        <h4 className={classes.skillsHeading}>Frameworks & Libraries</h4>
+        <ul className={classes.skillsColumn}>
+          <li>React</li>
+          <li>React Native</li>
+          <li>.NET Core</li>
+          <li>Ruby on Rails</li>
+          <li>Express</li>
+          <li>Bootstrap, MaterialUI</li>
+        </ul>
       </div>
-    </div>
+      <div>
+        <h4 className={classes.skillsHeading}>Other</h4>
+        <ul className={classes.skillsColumn}>
+          <li>Docker</li>
+          <li>Agile Development</li>
+          <li>Heroku</li>
+          <li>Azure</li>
+        </ul>
+      </div>
+    </section>
+    <section className={classes.interests}>
+      <h2 className={classes.pageHeading}>
+        <span className={classes.whack}> / </span> Interests <span className={classes.whack}> / </span>
+      </h2>
+      <p>
+        I'm Keenan Jaenicke. I'm a fullstack web developer from the midwest US.  I love building applications that put user experience at the forefront and that solve 
+        difficult problems.  I can work well in teams, large and small, and including a team of one.  I consider myself a lifelong learner and I'm eager to always take on new challenges. 
+      </p>
+      <img alt="me_at_yosemite_nat_park" className={classes.me} src="yosemite.jpg" />
+      <p>
+        In my free time I enjoy trail running, hiking, playing with my dogs, and tabletop gaming.
+        I enjoy pushing myself to new limits in every area of my life, in order to better myself.  I challenge myself physically by running long distance and I always want 
+        to better my skills as a developer.
+      </p>
+    </section>
   </div>
 );
 
