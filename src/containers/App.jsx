@@ -9,7 +9,10 @@ const classes = {
     overflow: 'hidden',
     margin: 0,
     display: 'flex',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    '@media (max-width: 480px)': {
+      flexDirection: 'column'
+    }
   },
   sidebar: {
     height: '100%',
@@ -18,7 +21,12 @@ const classes = {
     width: '30%',
     flexGrow: 1,
     overflowY: 'auto',
-    boxShadow: '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)'
+    boxShadow: '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)',
+    '@media (max-width: 480px)': {
+      width: '100%',
+      height: '100px',
+      boxShadow: 'none'
+    }
   },
   content: {
     height: '100%',
@@ -26,7 +34,10 @@ const classes = {
     flexDirection: 'column',
     width: '70%',
     flexGrow: 1,
-    overflowY: 'auto'
+    overflowY: 'auto',
+    '@media (max-width: 480px)': {
+      width: '100%'
+    }
   }
 };
 

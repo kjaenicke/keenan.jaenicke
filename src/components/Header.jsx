@@ -30,6 +30,9 @@ const classes = {
       '& li': {
         borderTop: 'none'
       }
+    },
+    '@media (max-width: 480px)': {
+      display: 'none'
     }
   },
   menuItem: {
@@ -49,7 +52,7 @@ const classes = {
       textDecoration: 'underline',
       textDecorationColor: '#fba506'
     },
-    transition: 'color 1s, transform 0.35s'
+    transition: 'color 1s, transform 0.35s',
   },
   menuItemLogo: {
     color: colors.white,
@@ -64,20 +67,19 @@ const classes = {
     fontWeight: 'bold',
     textTransform: 'uppercase',
     letterSpacing: '1px',
-    backgroundColor: colors.black
+    backgroundColor: colors.black,
+    '@media (max-width: 480px)': {
+      padding: 0,
+      justifyContent: 'flex-start'
+    }
   },
-  '@media (max-width: 425px)': {
-    header: {
-      height: '100%',
-      flexWrap: 'wrap',
-      flexDirection: 'row',
-      justifyContent: 'center'
-    },
-    menu: {
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      alignItems: 'center',
-      paddingLeft: '0px'
+  logo: {
+    '@media (max-width: 480px)': {
+      width: '75px',
+      height: '75px',
+      '& text': {
+        fontSize: '2.5rem'
+      }
     }
   }
 };
@@ -86,7 +88,7 @@ const Header = ({ sheet: {classes} }, context) => {
   return (
     <header className={classes.header}>
       <div className={classes.menuItemLogo}>
-        <svg width="250" height="250">
+        <svg width="250" height="250" className={classes.logo}>
           <defs>
             <linearGradient id="gradient">
               <stop offset="0%" stopColor="#fc1da7" />
@@ -101,15 +103,6 @@ const Header = ({ sheet: {classes} }, context) => {
         <Link activeClassName="active" to="/home">
           <li className={classes.menuItem}>Home</li>
         </Link>
-        {/* <Link activeClassName="active" to="/tech">
-          <li className={classes.menuItem}>Tech</li>
-        </Link>
-        <Link activeClassName="active" to="/running">
-          <li className={classes.menuItem}>Running</li>
-        </Link>
-        <Link activeClassName="active" to="/random">
-          <li className={classes.menuItem}>Random</li>
-        </Link> */}
         <Link activeClassName="active" to="/about">
           <li className={classes.menuItem}>About</li>
         </Link>

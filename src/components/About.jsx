@@ -22,14 +22,17 @@ const classes = {
   },
   skills: {
     display: 'flex',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
+    '@media (max-width: 480px)': {
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }
   },
   skillsHeading: {
     textTransform: 'uppercase',
     textAlign: 'center',
     textDecoration: 'underline',
     textDecorationColor: colors.darkGrey,
-
   },
   skillsColumn: {
     listStyle: 'none',
@@ -37,7 +40,8 @@ const classes = {
     textAlign: 'center',
     '& li': {
       margin: '10px 0 10px 0',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      fontSize: '1.5rem'
     }
   },
   interests: {
@@ -55,14 +59,18 @@ const classes = {
     padding: '10px',
     background: colors.white,
     border: `1px solid ${colors.mediumGrey}`,
-    borderRadius: '5px'
+    borderRadius: '5px',
+    '@media (max-width: 480px)': {
+      height: '75%',
+      width: '75%'
+    }
   }
 };
 
 const About = ({ sheet: {classes} }) => (
   <div className={classes.about}>
     <h2 className={classes.pageHeading}>
-      <span className={classes.whack}> / </span> Skills <span className={classes.whack}> / </span>
+      <span className={classes.whack}> && </span> About <span className={classes.whack}> && </span>
     </h2>
     <section className={classes.skills}>
       <div>
@@ -100,7 +108,7 @@ const About = ({ sheet: {classes} }) => (
     </section>
     <section className={classes.interests}>
       <h2 className={classes.pageHeading}>
-        <span className={classes.whack}> / </span> Interests <span className={classes.whack}> / </span>
+        <span className={classes.whack}> && </span> Interests <span className={classes.whack}> && </span>
       </h2>
       <p>
         I'm Keenan Jaenicke. I'm a fullstack web developer from the midwest US.  I love building applications that put user experience at the forefront and that solve 
