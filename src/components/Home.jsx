@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import injectSheet from 'react-jss';
 import colors from '../theme/colors';
 
@@ -11,13 +10,22 @@ const classes = {
   header: {
     margin: 0,
     backgroundColor: colors.orange,
-    height: '100%',
     display: 'flex',
+    height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
-  welcome: {
+  section: {
+    backgroundColor: colors.orange,
+    width: '100%'
+  },
+  heading: {
+    color: colors.white,
+    textAlign: 'center',
+    width: '50%'
+  },
+  subtext:  {
     margin: 0,
     color: colors.white,
     textAlign: 'center',
@@ -33,11 +41,8 @@ const classes = {
     marginRight: '10px',
     textAlign: 'center'
   },
-  grad: {
-    // border: `1px solid ${colors.pink}`,
-    // width: '75%'
-  },
   link: {
+    fontStyle: 'italic',
     display: 'inline-block',
     textDecoration: 'underline',
     textDecorationColor: colors.pink,
@@ -47,16 +52,22 @@ const classes = {
 
 const Home = ({ sheet: {classes}, greeting }) => (
   <div className={classes.home}>
-    <header className={classes.header}>
-      <h2><span className={classes.classy}>{greeting}, </span></h2>
-      <h3 className={classes.welcome}>
-        I'm Keenan Jaenicke and I'm a full stack web developer. I love building awesome web applications. Please check out my <a
-          className={classes.link}
-          href="#/about">skills
-        </a> and reach out if you're interested in working together!
+    <div className={classes.header}>
+      <h2 className={classes.heading}>
+        <span className={classes.classy}>{greeting},</span>
+      </h2>
+      <h2 className={classes.heading}>
+        I'm Keenan Jaenicke and I'm a full stack web developer.
+      </h2>
+      <h3 className={classes.subtext}>
+          I love building awesome web applications. Please check out my
+           <a
+            className={classes.link}
+            href="#/about">
+            skills
+            </a> and reach out if you're interested in working together!
       </h3>
-      <hr className={classes.grad} />
-    </header>
+    </div>
   </div>
 );
 

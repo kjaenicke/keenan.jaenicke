@@ -90,6 +90,14 @@ const classes = {
     '@media (max-width: 480px)': {
       display: 'none'
     }
+  },
+  social: {
+    textAlign: 'center',
+    fontSize: '2rem'
+  },
+  twitter: {
+    textDecoration: 'none',
+    color: colors.white
   }
 };
 
@@ -136,6 +144,11 @@ const Menu = ({ sheet: {classes} }, context) => {
           <li className={classes.menuItem}>About</li>
         </Link>
       </ul>
+      <div className={classes.social}>
+        <a className={classes.twitter} href="https://twitter.com/intent/follow?screen_name=KeenanJae">
+          <i className="fa fa-twitter" />
+        </a>
+      </div>
     </div>
   );
 };
