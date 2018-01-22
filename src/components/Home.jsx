@@ -1,69 +1,62 @@
 import React from 'react';
+import { Link } from 'react-router';
 import injectSheet from 'react-jss';
-import * as common from '../theme/common';
 import colors from '../theme/colors';
 
 const classes = {
-  homeWrapper: {
-    height: '100%'
-  },
   home: {
-    display: 'flex',
-    flex: 1,
-    flexDirection: 'column',
-    paddingTop: '2%',
-    paddingBottom: '2%'
+    height: '100%',
+    padding: '0'
   },
   header: {
-    flex: 1,
-    ...common.pageLayout.pageHeader,
-    color: colors.white
-  },
-  subHeader: {
-    flex: 2,
-    width: '75%',
-    alignSelf: 'center',
-    color: colors.white,
-    textAlign: 'center',
-    padding: '10px'
-  },
-  about: {
+    margin: 0,
+    backgroundColor: colors.orange,
+    height: '100%',
     display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'center',
-    flex: 1,
-    backgroundColor: colors.green,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column'
   },
-  me: {
-    alignSelf: 'center',
-    width: '25%',
-    border: `10px solid ${colors.white}`,
-    margin: '2%'
-  },
-  bio: {
+  welcome: {
+    margin: 0,
     color: colors.white,
-    width: '75%',
-    alignSelf: 'center'
+    textAlign: 'center',
+    width: '50%',
+    display: 'inline-block'
   },
-  '@media (max-width: 425px)': {
-    me: {
-      width: '50%'
-    }
+  classy: {
+    backgroundColor: colors.black,
+    color: colors.white,
+    fontWeight: 'bold',
+    display: 'inline-block',
+    padding: '2% 5% 2% 5%',
+    marginRight: '10px',
+    textAlign: 'center'
+  },
+  grad: {
+    // border: `1px solid ${colors.pink}`,
+    // width: '75%'
+  },
+  link: {
+    display: 'inline-block',
+    textDecoration: 'underline',
+    textDecorationColor: colors.pink,
+    color: colors.black
   }
 };
 
-const Home = ({ sheet: {classes}, posts }) => (
-  <div className={classes.homeWrapper}>
-    <div className={classes.home}>
-      <h2 className={classes.header}>
-        Always Creating
-      </h2>
-      <h3 className={classes.subHeader}>
-        I'm a developer that's passionate about building interesting,
-        engaging applications with modern web technologies.
+const Home = ({ sheet: {classes}, greeting }) => (
+  <div className={classes.home}>
+    <header className={classes.header}>
+      <h2><span className={classes.classy}>{greeting}, </span></h2>
+      <h3 className={classes.welcome}>
+        I'm Keenan Jaenicke and I'm a full stack web developer. I love building awesome web applications. Please check out my <a
+          className={classes.link}
+          href="#/about">skills
+        </a> and reach out if you're interested in working together!
       </h3>
-    </div>
+      <hr className={classes.grad} />
+    </header>
   </div>
 );
 

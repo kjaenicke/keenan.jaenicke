@@ -1,7 +1,7 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-import Header from '../components/Header';
+import Menu from '../components/Menu';
 
 const classes = {
   app: {
@@ -14,11 +14,11 @@ const classes = {
       flexDirection: 'column'
     }
   },
-  sidebar: {
+  menu: {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    width: '30%',
+    width: '25%',
     flexGrow: 1,
     overflowY: 'auto',
     boxShadow: '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)',
@@ -32,7 +32,7 @@ const classes = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    width: '70%',
+    width: '75%',
     flexGrow: 1,
     overflowY: 'auto',
     '@media (max-width: 480px)': {
@@ -43,8 +43,8 @@ const classes = {
 
 const App = ({ sheet: {classes}, children }) => (
   <div className={classes.app}>
-    <div className={classes.sidebar}>
-      <Header />
+    <div className={classes.menu}>
+      <Menu />
     </div>
     <div className={classes.content}>
        {children}

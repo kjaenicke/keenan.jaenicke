@@ -1,16 +1,44 @@
 import React from 'react';
 import Home from '../components/Home';
-import PostsCategory from '../components/PostsCategory';
-import PostFactory from '../factories/PostFactory';
-import { fetchAllPosts } from '../actions';
 
-const HomeContainer = props => (
-  <div>
-    <Home />
-    {/* <PostsCategory
-      posts={ props.posts }
-    /> */}
-  </div>
-);
+const greetingList = [
+    'Hello',
+    'Welcome',
+    'Greetings',
+    'Howdy',
+    'Hi',
+    'Aloha'
+];
 
-export default PostFactory(HomeContainer, fetchAllPosts, "all");
+class HomeContainer extends React.Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            greeting: 'Hello'
+        };
+    }
+
+    componentDidMount(){
+        // Grab reference to interval to clear later
+        this.greetingsInterval = setInterval(() => {
+            const randy = Math.floor(Math.random() * greetingList.length);
+            this.setState({ greeting: greetingList[randy] });
+        }, 1000);
+    }
+
+    componentWillUnmount(){
+        // Remove interval when navigating away
+        clearInterval(this.greetingsInterval);
+    }
+
+    render(){
+        return (
+            <Home
+                greeting={this.state.greeting}
+            />
+        );
+    }
+}
+
+export default HomeContainer;

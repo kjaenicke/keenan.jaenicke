@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import colors from '../theme/colors';
 
 const classes = {
-  header: {
+  navigation: {
     backgroundColor: colors.darkGrey,
     flexGrow: 1,
     overflowY: 'auto'
@@ -22,7 +22,7 @@ const classes = {
       textDecoration: 'none',
       '&.active > li': {
         textDecoration: 'underline',
-        textDecorationColor: '#fba506'
+        textDecorationColor: colors.orange
       }
     },
     // Remove border from first menu item
@@ -44,13 +44,13 @@ const classes = {
     padding: '20px',
     cursor: 'pointer',
     textAlign: 'center',
-    fontSize: '24px',
+    fontSize: '1.5rem',
     textTransform: 'uppercase',
     letterSpacing: '1px',
     margin: '0 10px 0 10px',
     '&:hover': {
       textDecoration: 'underline',
-      textDecorationColor: '#fba506'
+      textDecorationColor: colors.orange
     },
     transition: 'color 1s, transform 0.35s',
   },
@@ -63,7 +63,7 @@ const classes = {
     padding: '10% 2% 10% 2%',
     cursor: 'pointer',
     textAlign: 'center',
-    fontSize: '32px',
+    fontSize: '1.75rem',
     fontWeight: 'bold',
     textTransform: 'uppercase',
     letterSpacing: '1px',
@@ -81,24 +81,53 @@ const classes = {
         fontSize: '2.5rem'
       }
     }
+  },
+  homeLink: {
+    textDecoration: 'none' 
+  },
+  tagline: {
+    fontFamily: 'Permanent Marker, cursive',
+    '@media (max-width: 480px)': {
+      display: 'none'
+    }
   }
 };
 
-const Header = ({ sheet: {classes} }, context) => {
+const Menu = ({ sheet: {classes} }, context) => {
   return (
-    <header className={classes.header}>
-      <div className={classes.menuItemLogo}>
-        <svg width="250" height="250" className={classes.logo}>
-          <defs>
-            <linearGradient id="gradient">
-              <stop offset="0%" stopColor="#fc1da7" />
-              <stop offset="100%" stopColor="#fba506" />
-            </linearGradient>
-          </defs>
-          <circle id="firstCircle" cx="50%" cy="50%" r="30%" fill="url(#gradient)"></circle>
-          <text x="50%" y="50%" textAnchor="middle" fill="white" fontSize="3rem" fontFamily="Permanent Marker, cursive" fontWeight="100" dy=".3em">KJ</text>
-        </svg>
-      </div>
+    <div className={classes.navigation}>
+      <a href="#/home" className={classes.homeLink}>
+        <div className={classes.menuItemLogo}>
+          <svg width="250" height="250" className={classes.logo}>
+            <defs>
+              <linearGradient id="gradient">
+                <stop offset="0%" stopColor={colors.pink} />
+                <stop offset="100%" stopColor={colors.orange} />
+              </linearGradient>
+            </defs>
+            <circle
+              id="firstCircle"
+              cx="50%"
+              cy="50%"
+              r="30%"
+              fill="url(#gradient)"
+              stroke={colors.white}>
+              strokeWidth="1%"
+            </circle>
+            <text
+              x="50%"
+              y="50%"
+              textAnchor="middle"
+              fill={colors.white}
+              fontSize="3rem"
+              fontFamily="Permanent Marker, cursive"
+              fontWeight="100"
+              dy=".3em">KJ
+            </text>
+          </svg>
+          <span className={classes.tagline}>Always creating</span>
+        </div>
+      </a>
       <ul className={classes.menu}>
         <Link activeClassName="active" to="/home">
           <li className={classes.menuItem}>Home</li>
@@ -107,12 +136,12 @@ const Header = ({ sheet: {classes} }, context) => {
           <li className={classes.menuItem}>About</li>
         </Link>
       </ul>
-    </header>
+    </div>
   );
 };
 
-Header.contextTypes = {
+Menu.contextTypes = {
   router: React.PropTypes.object
 };
 
-export default injectSheet(classes)(Header);
+export default injectSheet(classes)(Menu);

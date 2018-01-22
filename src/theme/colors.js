@@ -5,10 +5,8 @@ const colors = {
   black: 'rgba(44, 48, 46, 1)',
   darkGrey: 'rgba(71, 74, 72, 1)',
   darkGreen: 'rgba(93, 158, 114, 1)',
-  green: '#4C986D',
-  brown: 'rgba(196, 134, 104, 1)',
-  yellow: 'rgba(234, 214, 136, 1)',
-  purple: '#915E87'
+  pink: '#fc1da7',
+  orange: '#fba506'
 };
 
 export default colors;
