@@ -112,13 +112,14 @@ const About = ({ sheet: {classes} }) => (
       </h2>
       <p>
         I'm Keenan Jaenicke. I'm a fullstack web developer from the midwest US.  I love building applications that put user experience at the forefront and that solve 
-        difficult problems.  I can work well in teams, large and small, and including a team of one.  I consider myself a lifelong learner and I'm eager to always take on new challenges. 
+        difficult problems. I chose the title of this site "Always Creating" due to my love for learning new technologies through building. Taking an project from an idea to 
+        a working application can be an awesome experience with undoubtly some learning along the way.  I'm always looking for the next challenge!
       </p>
       <img alt="me_at_yosemite_nat_park" className={classes.me} src="yosemite.jpg" />
       <p>
-        In my free time I enjoy trail running, hiking, playing with my dogs, and tabletop gaming.
-        I enjoy pushing myself to new limits in every area of my life, in order to better myself.  I challenge myself physically by running long distance and I always want 
-        to better my skills as a developer.
+        In my free time I enjoy trail running, hiking, playing guitar, tabletop gaming, and spending time with my fiancée and our dogs. 
+        Being active outdoors is a nature balance to my career and helps me "reset".  I love getting out on my local trails and doing some miles to think
+        or listen to podcasts/audiobooks/music.
       </p>
     </section>
   </div>

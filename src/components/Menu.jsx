@@ -93,7 +93,10 @@ const classes = {
   },
   social: {
     textAlign: 'center',
-    fontSize: '2rem'
+    fontSize: '2rem',
+    '@media (max-width: 480px)': {
+      display: 'none'
+    }
   },
   twitter: {
     textDecoration: 'none',
