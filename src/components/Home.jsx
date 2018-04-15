@@ -18,7 +18,9 @@ const classes = {
     alignItems: "center",
     flexDirection: "column",
     justifyContent: "center",
-    marginTop: "20px"
+    "@media (max-width: 480px)": {
+      marginTop: "20px"
+    }
   },
   wrapper: {
     display: "flex",

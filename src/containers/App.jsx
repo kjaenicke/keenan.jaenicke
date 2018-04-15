@@ -24,10 +24,8 @@ const classes = {
   },
   content: {
     flexDirection: "column",
-    overflowY: "auto",
-    "@media (max-width: 720px)": {
-      width: "100%"
-    }
+    overflowY: "scroll",
+    overflowX: "hidden"
   }
 };
 
