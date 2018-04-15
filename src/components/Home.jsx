@@ -17,7 +17,8 @@ const classes = {
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
+    marginTop: "20px"
   },
   wrapper: {
     display: "flex",
