@@ -1,110 +1,110 @@
-import React from 'react';
-import injectSheet from 'react-jss';
-import { Link } from 'react-router';
-import colors from '../theme/colors';
+import React from "react";
+import injectSheet from "react-jss";
+import { Link } from "react-router";
+import colors from "../theme/colors";
 
 const classes = {
   navigation: {
     backgroundColor: colors.darkGrey,
     flexGrow: 1,
-    overflowY: 'auto'
+    overflowY: "auto"
   },
   homeButton: {
-    alignSelf: 'flex-start'
+    alignSelf: "flex-start"
   },
   menu: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    listStyle: 'none',
-    paddingLeft: '0px',
-    '& a': {
-      textDecoration: 'none',
-      '&.active > li': {
-        textDecoration: 'underline',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    listStyle: "none",
+    paddingLeft: "0px",
+    "& a": {
+      textDecoration: "none",
+      "&.active > li": {
+        textDecoration: "underline",
         textDecorationColor: colors.orange
       }
     },
     // Remove border from first menu item
-    '& > a:first-of-type': {
-      '& li': {
-        borderTop: 'none'
+    "& > a:first-of-type": {
+      "& li": {
+        borderTop: "none"
       }
     },
-    '@media (max-width: 480px)': {
-      display: 'none'
+    "@media (max-width: 720px)": {
+      display: "none"
     }
   },
   menuItem: {
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
     color: colors.white,
-    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-    borderTop: '1px solid rgba(255, 255, 255, 0.04)',
-    padding: '20px',
-    cursor: 'pointer',
-    textAlign: 'center',
-    fontSize: '1.5rem',
-    textTransform: 'uppercase',
-    letterSpacing: '1px',
-    margin: '0 10px 0 10px',
-    '&:hover': {
-      textDecoration: 'underline',
+    borderBottom: "1px solid rgba(0, 0, 0, 0.3)",
+    borderTop: "1px solid rgba(255, 255, 255, 0.04)",
+    padding: "20px",
+    cursor: "pointer",
+    textAlign: "center",
+    fontSize: "1.5rem",
+    textTransform: "uppercase",
+    letterSpacing: "1px",
+    margin: "0 10px 0 10px",
+    "&:hover": {
+      textDecoration: "underline",
       textDecorationColor: colors.orange
     },
-    transition: 'color 1s, transform 0.35s',
+    transition: "color 1s, transform 0.35s"
   },
   menuItemLogo: {
     color: colors.white,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-    padding: '10% 2% 10% 2%',
-    cursor: 'pointer',
-    textAlign: 'center',
-    fontSize: '1.75rem',
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-    letterSpacing: '1px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    borderBottom: "1px solid rgba(0, 0, 0, 0.3)",
+    padding: "10% 2% 10% 2%",
+    cursor: "pointer",
+    textAlign: "center",
+    fontSize: "1.75rem",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    letterSpacing: "1px",
     backgroundColor: colors.black,
-    '@media (max-width: 480px)': {
+    "@media (max-width: 720px)": {
       padding: 0,
-      justifyContent: 'flex-start'
+      justifyContent: "flex-start"
     }
   },
   logo: {
-    '@media (max-width: 480px)': {
-      width: '75px',
-      height: '75px',
-      '& text': {
-        fontSize: '2.5rem'
+    "@media (max-width: 720px)": {
+      width: "75px",
+      height: "75px",
+      "& text": {
+        fontSize: "2.5rem"
       }
     }
   },
   homeLink: {
-    textDecoration: 'none' 
+    textDecoration: "none"
   },
   tagline: {
-    fontFamily: 'Permanent Marker, cursive',
-    '@media (max-width: 480px)': {
-      display: 'none'
+    fontFamily: "Permanent Marker, cursive",
+    "@media (max-width: 720px)": {
+      display: "none"
     }
   },
   social: {
-    textAlign: 'center',
-    fontSize: '2rem',
-    '@media (max-width: 480px)': {
-      display: 'none'
+    textAlign: "center",
+    fontSize: "2rem",
+    "@media (max-width: 720px)": {
+      display: "none"
     }
   },
   twitter: {
-    textDecoration: 'none',
+    textDecoration: "none",
     color: colors.white
   }
 };
 
-const Menu = ({ sheet: {classes} }, context) => {
+const Menu = ({ sheet: { classes } }, context) => {
   return (
     <div className={classes.navigation}>
       <a href="#/home" className={classes.homeLink}>
@@ -122,7 +122,8 @@ const Menu = ({ sheet: {classes} }, context) => {
               cy="50%"
               r="30%"
               fill="url(#gradient)"
-              stroke={colors.white}>
+              stroke={colors.white}
+            >
               strokeWidth="1%"
             </circle>
             <text
@@ -133,7 +134,9 @@ const Menu = ({ sheet: {classes} }, context) => {
               fontSize="3rem"
               fontFamily="Permanent Marker, cursive"
               fontWeight="100"
-              dy=".3em">KJ
+              dy=".3em"
+            >
+              KJ
             </text>
           </svg>
           <span className={classes.tagline}>Always creating</span>
@@ -148,7 +151,10 @@ const Menu = ({ sheet: {classes} }, context) => {
         </Link>
       </ul>
       <div className={classes.social}>
-        <a className={classes.twitter} href="https://twitter.com/intent/follow?screen_name=KeenanJae">
+        <a
+          className={classes.twitter}
+          href="https://twitter.com/intent/follow?screen_name=KeenanJae"
+        >
           <i className="fa fa-twitter" />
         </a>
       </div>
