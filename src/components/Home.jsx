@@ -32,13 +32,19 @@ const classes = {
   heading: {
     color: colors.white,
     textAlign: "center",
-    width: "50%"
+    width: "50%",
+    "@media (max-width: 720px)": {
+      width: "75%"
+    }
   },
   subtext: {
     margin: "0 0 20px 0",
     color: colors.white,
     textAlign: "center",
-    width: "50%"
+    width: "50%",
+    "@media (max-width: 720px)": {
+      width: "75%"
+    }
   },
   classy: {
     backgroundColor: colors.black,
