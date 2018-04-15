@@ -45,6 +45,7 @@ class HomeContainer extends React.Component {
           style={{
             backgroundColor: brickColors[this.getRandomNumber(0, 5)],
             gridColumn: `span ${this.getRandomNumber(1, 3)}`,
+            gridRow: `span ${this.getRandomNumber(1, 3)}`,
             opacity: "0.7"
           }}
         />
@@ -62,6 +63,7 @@ class HomeContainer extends React.Component {
           gridTemplateColumns: `repeat(${numColumns}, 1fr)`,
           gridAutoColumns: "auto",
           gridTemplateRows: `repeat(3, 100px, 200px)`,
+          gridAutoFlow: "dense",
           zIndex: -1,
           position: "fixed"
         }}

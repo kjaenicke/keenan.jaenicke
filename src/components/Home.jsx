@@ -19,7 +19,7 @@ const classes = {
     flexDirection: "column",
     justifyContent: "center",
     "@media (max-width: 480px)": {
-      marginTop: "20px"
+      paddingTop: "20px"
     }
   },
   wrapper: {
